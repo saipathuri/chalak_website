@@ -1,0 +1,28 @@
+/*Title to Chalak Color*/
+/*.navbar-custom .navbar-brand {
+	color: #9A12B3;
+}
+
+.text-primary, a{
+	color: #9A12B3;
+}
+
+.btn{
+	background-color: #9A12B3;
+	border: #9A12B3;
+}
+
+.navbar-custom .navbar-nav>.active>a{
+	background-color: #9A12B3;
+}
+
+.navbar-custom .navbar-nav>a{
+	color: #BE90D4;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
+  color: #913D88;
+}*/
