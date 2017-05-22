@@ -398,7 +398,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" method="POST" action="http://formspree.io/utdchalak@gmail.com"novalidate>
+                    <form name="sentMessage" id="contactForm" method="POST" action="http://formspree.io/admin@saipathuri.me"novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -421,7 +421,7 @@
                                 </div>
                             </div>
                             <!-- TODO: Change this to chalak domain name when purchased -->
-                            <input type="hidden" name="_next" value="http://saipathuri.me/chalak_website/#contact" />
+                            <input type="hidden" name="_next" value="http://www.saipathuri.me/chalak_website/?mail=true#contact" />
                             <input type="hidden" name="_subject" value="Contact from Chalak Website!" />
                             <input type="text" name="_gotcha" style="display:none" />
                             <div class="clearfix"></div>
@@ -433,6 +433,16 @@
                     </form>
                 </div>
             </div>
+            <div class="row">
+                    <div class="col-lg-12">
+                        <div class="alert alert-success alert-dismissible show" role="alert" style="display: none!important" id="mail_alert_success">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>Mail sent!</strong> We will get in touch with you shortly.
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -652,6 +662,25 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+    <script>
+        var mailVar = getQueryVariable("mail");
+        if (mailVar == "true"){
+            var mail_alert = document.getElementById("mail_alert_success");
+            mail_alert.style.display = "block";
+        }
+
+        function getQueryVariable(variable) {
+          var query = window.location.search.substring(1);
+          var vars = query.split("&");
+          for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+              return pair[1];
+            }
+          }
+        }
+    </script>
 
 </body>
 
